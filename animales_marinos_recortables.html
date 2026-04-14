@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recortables de Animales Marinos</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #006064;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .instructions {
+            background-color: #ffffff;
+            padding: 20px 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            text-align: center;
+            color: #333;
+            max-width: 600px;
+        }
+        .instructions h3 {
+            margin-top: 0;
+            color: #00838f;
+            font-size: 1.5rem;
+        }
+        .print-btn {
+            background: linear-gradient(135deg, #00acc1, #00838f);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 10px rgba(0, 172, 193, 0.3);
+        }
+        .print-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 172, 193, 0.4);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            width: 100%;
+            max-width: 1200px;
+            padding-bottom: 40px;
+        }
+        .cutout {
+            background-color: white;
+            border: 4px dashed #9e9e9e;
+            border-radius: 20px;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .cutout:hover {
+            transform: scale(1.03) translateY(-5px);
+            border-color: #00acc1;
+        }
+        .scissors {
+            position: absolute;
+            top: -18px;
+            left: 20px;
+            font-size: 28px;
+            background: #e0f7fa;
+            padding: 0 10px;
+            transition: background 0.3s;
+        }
+        .cutout:hover .scissors {
+            background: #ffffff;
+        }
+        .animal-icon {
+            font-size: 120px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 10px 10px rgba(0,0,0,0.15));
+            transition: transform 0.3s;
+        }
+        .cutout:hover .animal-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        .animal-name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #006064;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: #e0f7fa;
+            padding: 5px 20px;
+            border-radius: 30px;
+        }
+
+        /* Estilos específicos para impresión */
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .instructions {
+                display: none;
+            }
+            .grid {
+                display: block;
+                gap: 0;
+            }
+            .cutout {
+                display: inline-flex;
+                width: 42%;
+                margin: 20px 3%;
+                box-sizing: border-box;
+                break-inside: avoid;
+                box-shadow: none;
+                border-color: #666;
+            }
+            .scissors {
+                background: white;
+            }
+            .animal-name {
+                background: transparent;
+            }
+            h1 {
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌊 Recortables de Animales Marinos 🌊</h1>
+    
+    <div class="instructions">
+        <h3>Instrucciones</h3>
+        <p>1. Imprime esta página (recomendado en papel grueso o cartulina).</p>
+        <p>2. Usa unas tijeras para recortar por las líneas punteadas (✂️).</p>
+        <p>3. ¡Diviértete, úsalos para decorar, aprender o jugar!</p>
+        <button class="print-btn" onclick="window.print()">🖨️ Imprimir Recortables</button>
+    </div>
+
+    <div class="grid">
+        <div class="cutout">
+            <span class="scissors">✂️</span>
+            <div class="animal-icon">🐬</div>
+            <div class="animal-name">Delfín</div>
+        </div>
+        
+        <div class="cutout">
+            <span class="scissors">✂️</span>
+            <div class="animal-icon">🦈</div>
+            <div class="animal-name">Tiburón</div>
+        </div>
+        
+        <div class="cutout">
+            <span class="scissors">✂️</span>
+            <div class="animal-icon">🐋</div>
+            <div class="animal-name">Ballena</div>
+        </div>
+        
+        <div class="cutout">
+            <span class="scissors">✂️</span>
+            <div class="animal-icon">🐙</div>
+            <div class="animal-name">Pulpo</div>
+        </div>
+        
+        <div class="cutout">
+            <span class="scissors">✂️</span>
+            <div class="animal-icon">🐢</div>
+            <div class="animal-name">Tortuga</div>
+        </div>
+        
+        <div class="cutout">
+            <span class="scissors">✂️</span>
+            <div class="animal-icon">🦀</div>
+            <div class="animal-name">Cangrejo</div>
+        </div>
+        
+        <div class="cutout">
+            <span class="scissors">✂️</span>
+            <div class="animal-icon">🐠</div>
+            <div class="animal-name">Pez</div>
+        </div>
+        
+        <div class="cutout">
+            <span class="scissors">✂️</span>
+            <div class="animal-icon">🦑</div>
+            <div class="animal-name">Calamar</div>
+        </div>
+        
+        <div class="cutout">
+            <span class="scissors">✂️</span>
+            <div class="animal-icon">🦭</div>
+            <div class="animal-name">Foca</div>
+        </div>
+        
+        <div class="cutout">
+            <span class="scissors">✂️</span>
+            <div class="animal-icon">🐡</div>
+            <div class="animal-name">Pez Globo</div>
+        </div>
+    </div>
+
+</body>
+</html>
